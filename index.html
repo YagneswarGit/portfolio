@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yagneswar Thogatamadham | Frontend & Data Developer</title>
+
+  <meta name="description" content="Frontend & Data Developer portfolio of Yagneswar Thogatamadham. Skilled in HTML, CSS, JavaScript, Tableau, Python." />
+
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #334155;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 18px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        display: none;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    /* HERO */
+    header {
+      padding: 120px 20px 80px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: clamp(28px, 5vw, 42px);
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    .cta {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background: white;
+      color: var(--primary);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+      display: grid;
+      gap: 30px;
+    }
+
+    section {
+      background: var(--card);
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      margin-bottom: 15px;
+      color: var(--primary);
+      border-left: 5px solid var(--accent);
+      padding-left: 12px;
+      font-size: 22px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      background: #eef2ff;
+      padding: 18px;
+      border-radius: 14px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    @media (min-width: 768px) {
+      main {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .full {
+        grid-column: span 2;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Yagneswar.dev</div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="menu" id="menu">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="about">
+    <h1>Yagneswar Thogatamadham</h1>
+    <p>Frontend Developer | Data & BI Analyst</p>
+    <div class="cta">
+      <a class="btn" href="mailto:tyagnesh123@gmail.com">Hire Me</a>
+      <a class="btn" href="https://public.tableau.com/app/profile/yagnesh.t" target="_blank">View Dashboards</a>
+      <a class="btn" href="https://www.linkedin.com/in/yagneswardeveloper7680801936" target="_blank">LinkedIn</a>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <main>
+
+    <section class="full">
+      <h2>Professional Summary</h2>
+      <p>
+        Frontend-focused developer with strong foundations in HTML, CSS, JavaScript, and data visualization using Tableau. Experienced in building responsive, recruiter-friendly web interfaces and interactive dashboards. Passionate about clean UI, performance, and user experience.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Frontend Skills</h2>
+      <div class="grid">
+        <div class="card">HTML5 & Semantic Markup</div>
+        <div class="card">CSS3, Flexbox & Grid</div>
+        <div class="card">Responsive Design</div>
+        <div class="card">JavaScript (ES6)</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Data & BI Skills</h2>
+      <div class="grid">
+        <div class="card">Tableau Dashboards</div>
+        <div class="card">Data Preprocessing</div>
+        <div class="card">Excel to Tableau Modeling</div>
+        <div class="card">Python Basics</div>
+      </div>
+    </section>
+
+    <section id="projects" class="full">
+      <h2>Highlighted Projects</h2>
+      <div class="grid">
+        <div class="card">HR Analytics Dashboard – Employee Attrition Analysis</div>
+        <div class="card">Responsive Resume Website (This Site)</div>
+        <div class="card">Static Web Pages using HTML & CSS</div>
+      </div>
+    </section>
+
+    <section id="contact" class="full">
+      <h2>Contact</h2>
+      <p>📞 9182779813 | ✉️ tyagnesh123@gmail.com</p>
+      <p>📍 India | Open to Remote Opportunities</p>
+    </section>
+
+  </main>
+
+  <footer>
+    © <span id="year"></span> Yagneswar Thogatamadham · Frontend Portfolio
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('active');
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
